@@ -16,7 +16,7 @@
 				var shortenedLink = "https://legend-of-iphoenix.github.io/link-shortener-of-death-and-destruction/shortened-link.html?link-url=" + encodeURI(search.split('=')[1]);
 				document.getElementById('result').innerText = shortenedLink;
 				document.getElementById('chars').innerText = shortenedLink.length - longLink.length;
-				document.getElementById('percent').innerText = Math.floor(100*(shortenedLink.length)/(longLink.length))/100;
+				document.getElementById('percent').innerText = Math.floor(100*100*(shortenedLink.length - longLink.length)/(longLink.length))/100;
 			} else {
 				location.href = "index.html";
 			}
