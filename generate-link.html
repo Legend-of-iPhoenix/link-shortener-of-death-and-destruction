@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="My hilariously ineffective link shortener">
+  <meta name="keywords" content="_iPhoenix_, iPhoenix, ">
+  <meta name="author" content="_iPhoenix_">
+	<title>_iPhoenix_'s link shortener</title>
+</head>
+<body>
+	<script type="text/javascript">
+		window.onload = function() {
+			var search = location.search; 
+			if (search) {
+				document.getElementById('result').innerText = encodeURI(search.split('=')[1]);
+			} else {
+				location.href = "index.html";
+			}
+		}
+	</script>
+	<p> Here is your shortened URL: </p>
+	<p> https://legend-of-iphoenix.github.io/link-shortener-of-death-and-destruction/shortened-link.html?link-url=<span id="result"></span> </p>
+</body>
+</html>
