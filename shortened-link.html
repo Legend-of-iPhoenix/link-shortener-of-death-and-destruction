@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="My hilariously ineffective link shortener">
+  <meta name="keywords" content="_iPhoenix_, iPhoenix, ">
+  <meta name="author" content="_iPhoenix_">
+	<title>_iPhoenix_'s link shortener</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function redirect() {
+			location.href.replace(decodeURI(location.search.split('=')[1]));
+		}
+		window.onload = function() {
+			var search = location.search; 
+			if (!search) {
+				location.href = "index.html";
+			}
+		}
+	</script>
+	<h1> Click the button below to proceed to your link </h1>
+	<input type="button" onclick="redirect">
+</body>
+</html>
