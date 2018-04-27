@@ -12,13 +12,18 @@
 		window.onload = function() {
 			var search = location.search; 
 			if (search) {
-				document.getElementById('result').innerText = encodeURI(search.split('=')[1]);
+				var longLink = search.split('=')[1];
+				var shortenedLink = "https://legend-of-iphoenix.github.io/link-shortener-of-death-and-destruction/shortened-link.html?link-url=" + encodeURI(search.split('=')[1]);
+				document.getElementById('result').innerText = shortenedLink;
+				document.getElementById('chars').innerText = shortenedLink.length - longLink.length;
+				document.getElementById('percent').innerText = Math.floor(100*(shortenedLink.length)/(longLink.length))/100;
 			} else {
 				location.href = "index.html";
 			}
 		}
 	</script>
 	<p> Here is your shortened URL: </p>
-	<p> https://legend-of-iphoenix.github.io/link-shortener-of-death-and-destruction/shortened-link.html?link-url=<span id="result"></span> </p>
+	<p> <span id="result"></span> </p>
+	<p> Your link decreased in size by -<span id="chars"></span> characters (+<span id="percent"></span>%) </p>
 </body>
 </html>
